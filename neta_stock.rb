@@ -19,11 +19,11 @@ end
 client = TweetStream::Client.new
 client.track("@geeoki_hack") do |status|
   puts status.text
-  neta = "#{status.text.gsub("@geeoki_hack ","")}\n" 
+  neta = "#{status.text.gsub("@geeoki_hack ","")}" 
   puts neta
-  open("neta.txt", "a") {|f| f.write neta}
-  Twitter.update("ネタワード:#{neta} をストックしました" )
-  puts neta
+  word = neta + "\n"
+  open("neta.txt", "a") {|f| f.write word}
+  Twitter.update("ネタワード:#{neta} をストックしました #geeoknt" )
 end
 
 client.userstream
