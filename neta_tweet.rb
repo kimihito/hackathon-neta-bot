@@ -15,5 +15,5 @@ end
 
 netas = open("neta.txt").readlines.sample(2)
 
-Twitter.update("#{netas[0]}と #{netas[1]}はいかがでしょう？") 
+Twitter.update("#{netas[0]}と#{netas[1]}がテーマです!!!!") 
 
