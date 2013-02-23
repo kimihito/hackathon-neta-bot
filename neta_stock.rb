@@ -22,7 +22,7 @@ client.track("@geeoki_hack") do |status|
   neta = "#{status.text.gsub("@geeoki_hack ","")}\n" 
   puts neta
   open("neta.txt", "a") {|f| f.write neta}
-  Twitter.update("@#{status.user.screen_name} ストックしました。ありがとう" )
+  Twitter.update("ネタワード:#{neta} をストックしました" )
   puts neta
 end
 
